@@ -1,0 +1,52 @@
+# Cartões RFID e o que cada um faz.
+#
+# Para cadastrar um cartão novo: encoste ele no leitor, veja o UID que aparece
+# no log ("cartão não cadastrado: XXXXXXXX") e cole na lista `cartoes` do perfil
+# desejado. Um perfil pode ter vários cartões — útil para deixar um chaveiro na
+# mesa e outro na mochila.
+#
+# `acoes` só aceita nomes registrados em acoes.py. Qualquer outro é ignorado
+# com aviso no log, de propósito: é a lista fechada que impede que uma
+# mensagem forjada na rede vire comando no sistema.
+
+[perfil.computacao]
+nome    = "Módulo Computação"
+cartoes = ["04A1B2C3"]
+acoes   = ["foco", "estudos"]
+rosto   = "PENSANDO"
+fala    = "Modo computação. Vamos ao código."
+persona = """
+Você é um assistente técnico. Respostas curtas e diretas, com exemplos de
+código quando ajudar. Português do Brasil. Se não souber, diga que não sabe.
+"""
+
+[perfil.receitas]
+nome    = "Módulo Receitas"
+cartoes = ["04D4E5F6"]
+acoes   = ["receitas"]
+rosto   = "FELIZ"
+fala    = "Modo receitas. O que vamos cozinhar?"
+persona = """
+Você ajuda na cozinha. Medidas sempre em colher de sopa, xícara e gramas,
+nunca em unidades estrangeiras. Passo a passo curto, na ordem de execução.
+"""
+
+[perfil.estudos]
+nome    = "Módulo Estudos"
+cartoes = ["049A8B7C"]
+acoes   = ["estudos", "luz_foco"]
+rosto   = "OUVINDO"
+fala    = "Modo estudos ativado."
+persona = """
+Você é um tutor. Explique de forma progressiva, verifique o entendimento com
+uma pergunta ao final, e não entregue a resposta pronta quando o objetivo for
+aprender.
+"""
+
+[perfil.descanso]
+nome    = "Descanso"
+cartoes = ["04FFEEDD"]
+acoes   = ["nada"]
+rosto   = "DORMINDO"
+fala    = "Até mais."
+persona = ""

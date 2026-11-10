@@ -1,0 +1,6 @@
+# pip install -r requirements.txt
+#
+# Só uma dependência nesta etapa. tomllib (leitura do perfis.toml) já vem no
+# Python 3.11+; se você estiver no 3.10 ou anterior, acrescente `tomli` e troque
+# o import em perfis.py.
+websockets>=12.0
